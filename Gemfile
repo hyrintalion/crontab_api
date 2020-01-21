@@ -28,9 +28,35 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'config' # Effortless multi-environment settings in Rails, Sinatra, Pandrino and others (https://github.com/railsconfig/config)
+gem 'unicorn', '5.4.1' # Rack HTTP server for fast clients and Unix (https://bogomips.org/unicorn/)
+gem 'json' # JSON Implementation for Ruby (http://flori.github.com/json)
+
+# -- DRY & Patterns -- #
+gem 'aasm' # State machine mixin for Ruby objects (https://github.com/aasm/aasm)
+gem 'representable' # Renders and parses JSON/XML/YAML documents from and to Ruby objects. Includes plain properties, collections, nesting, coercion and more. (https://github.com/trailblazer/representable/)
+gem 'draper' # View Models for Rails (http://github.com/drapergem/draper)
+gem 'dry-validation' # A simple validation library (https://github.com/dry-rb/dry-validation)
+gem 'dry-transaction' # Business Transaction Flow DSL (https://github.com/dry-rb/dry-transaction)
+gem 'dry-container' # A simple container intended for use as an IoC container (https://github.com/dry-rb/dry-container)
+gem 'dry-auto_inject' # Container-agnostic automatic constructor injection (https://github.com/dryrb/dry-auto_inject)
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails' # Use Pry as your rails console (https://github.com/rweng/pry-rails)
+
+  gem 'factory_bot_rails' # factory_bot_rails provides integration between factory_bot and rails 4.2 or newer (https://github.com/thoughtbot/factory_bot_rails)
+  gem 'rspec' # rspec-3.8.0 (http://github.com/rspec)
+  gem 'shoulda-matchers', '~> 4.0' # Making tests easy on the fingers and eyes (https://matchers.shoulda.io/)
+  gem 'rspec-rails' # RSpec for Rails (https://github.com/rspec/rspec-rails)
+  gem 'rails-controller-testing' # Extracting `assigns` and `assert_template` from ActionDispatch. (https://github.com/rails/rails-controller-testing)
+  gem 'ffaker' # Ffaker generates dummy data. (https://github.com/ffaker/ffaker)
+
+  # -- Annotations -- #
+  gem 'annotate' # Annotates Rails Models, routes, fixtures, and others based on the database schema. (http://github.com/ctran/annotate_models)
+  gem 'annotate_gem' # Add comments to your Gemfile with each dependency's description. (https://github.com/ivantsepp/annotate_gem)
 end
 
 group :development do
